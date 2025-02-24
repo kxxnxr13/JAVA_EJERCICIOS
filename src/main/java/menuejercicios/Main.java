@@ -26,6 +26,8 @@ public class Main {
             System.out.println("14. Viaje de coche");
             System.out.println("15. Cuenta regresiva");
             System.out.println("16. Juego adivinanza");
+            System.out.println("17. Registro biblioteca");
+            System.out.println("18. Menu comida rapida");
             System.out.println("20. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
@@ -61,7 +63,7 @@ public class Main {
                 case 7:
                      manejarCompraProductos(scanner);
                      break;
-                     
+
                 case 8:
                     AsistenteNutricionista.calcularIMC(scanner);
                     break;
@@ -78,11 +80,11 @@ public class Main {
                 case 12:
                     TiendaOnline tienda = new TiendaOnline();
                     tienda.ejecutar(scanner);
-                 
+
                 case 13:
                     Impresora impresora = new Impresora(50);
                     impresora.ejecutar(scanner);
-                
+
                 case 14:
                     ViajeCoche viajeCoche = new ViajeCoche();
                     viajeCoche.ejecutar(scanner);
@@ -92,7 +94,13 @@ public class Main {
                 case 16:
                     JuegoAdivinanza juegoAdivinanza = new JuegoAdivinanza();
                     juegoAdivinanza.ejecutar(scanner);
-                    
+                case 17:
+                    RegistroBiblioteca registroBiblioteca = new RegistroBiblioteca();
+                    registroBiblioteca.ejecutar(scanner);
+                    break;
+                case 18:
+                    MenuComidaRapida menuComidaRapida = new MenuComidaRapida();
+                    menuComidaRapida.ejecutar(scanner);
                 case 20:
                     System.out.println("Saliendo del programa...");
                     break;
