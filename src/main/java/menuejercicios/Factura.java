@@ -32,6 +32,7 @@ public class Factura {
     }
 
     public void setProducto(String producto) {
+
         this.producto = producto;
     }
 

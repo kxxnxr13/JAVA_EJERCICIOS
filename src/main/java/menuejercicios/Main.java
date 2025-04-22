@@ -28,7 +28,16 @@ public class Main {
             System.out.println("16. Juego adivinanza");
             System.out.println("17. Registro biblioteca");
             System.out.println("18. Menu comida rapida");
-            System.out.println("20. Salir");
+            System.out.println("19. Sensor temperatura loop");
+            System.out.println("20. Promedio Notas");
+            System.out.println("21. Gestor tareas");
+            System.out.println("22. Registro Ventas");
+            System.out.println("23. Registro Parqueadero");
+            System.out.println("24. Tienda Virtual");
+            System.out.println("25. Agenda Contacto");
+            System.out.println("26. Suma Números");
+            System.out.println("27. Proceso ventas");
+            System.out.println("28. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Limpiar el buffer
@@ -101,7 +110,47 @@ public class Main {
                 case 18:
                     MenuComidaRapida menuComidaRapida = new MenuComidaRapida();
                     menuComidaRapida.ejecutar(scanner);
+                case 19:
+                    SensorTemperaturaLoop sensorLoop = new SensorTemperaturaLoop();
+                    sensorLoop.verificarTemperatura(scanner);
+                    break;
                 case 20:
+                    PromedioNotas promedioNotas = new PromedioNotas();
+                    promedioNotas.calcularPromedio(scanner);
+                    break;
+                case 21:
+                    GestorTareas gestor = new GestorTareas();
+                    gestor.gestionarTareas(scanner);
+                    break;
+
+                case 22:
+                    RegistroVentas registro = new RegistroVentas();
+                    registro.registrarVentas(scanner);
+                    break;
+                case 23:
+                    RegistroParqueadero parqueadero = new RegistroParqueadero();
+                    parqueadero.registrarVehiculos(scanner);
+                    break;
+                case 24:
+                    TiendaVirtual tiendaVirtual = new TiendaVirtual();
+                    tiendaVirtual.realizarCompra(scanner);
+                    break;
+                case 25:
+                    AgendaContactos agenda = new AgendaContactos();
+                    agenda.registrarContactos(scanner);
+                    break;
+
+                case 26:
+                    SumaNumeros sumaNumeros = new SumaNumeros();
+                    sumaNumeros.ejecutar(scanner);
+                    break;
+
+                case 27:
+                    ProcesoVentas procesoVentas = new ProcesoVentas();
+                    procesoVentas.ejecutar(scanner);
+                    break;
+
+                case 28:
                     System.out.println("Saliendo del programa...");
                     break;
 
@@ -109,7 +158,7 @@ public class Main {
                 default:
                     System.out.println("Opción no válida. Intente nuevamente.");
             }
-        } while (opcion != 20);
+        } while (opcion != 28);
 
         scanner.close();
     }
